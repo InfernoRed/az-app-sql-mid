@@ -11,7 +11,9 @@ builder.Configuration.AddJsonFile("appsettings.Local.json",
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {   
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    var connection = builder.Configuration.GetConnectionString("DefaultConnection");
+    Console.WriteLine($"Connection: {connection}");
+    options.UseSqlServer(connection);
     options.UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));
 });
 builder.Services.AddScoped<DbInitializer>();

@@ -10,6 +10,7 @@
     <SpaProxyServerUrl>https://localhost:44445</SpaProxyServerUrl>
     <SpaProxyLaunchCommand>npm start</SpaProxyLaunchCommand>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3d285ed6-1741-4df2-8b0c-57e955a99a16</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Azure.Core" Version="1.40.0" />
